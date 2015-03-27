@@ -22,10 +22,11 @@ public class Customer {
 	}
 	
 	public void addFRP(Media m){
-		frequentRPoints++;
+	/*	frequentRPoints++;
 		if (m.isNew() && m.getDays()>1)
 			frequentRPoints++;
-		
+	*/
+		frequentRPoints+=FRPStrategy.addFRP(m);
 	}
     
     /*public String statement() {

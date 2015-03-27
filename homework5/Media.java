@@ -6,7 +6,8 @@ abstract class Media {
 	private int pPrice;
 	private boolean isN;
 	private boolean kids;
-    
+    private boolean reg;
+
     public Media(String _title) {
         title = _title;
 		daysrented=0;
@@ -50,5 +51,13 @@ abstract class Media {
 	
 	public void setKids(boolean val){
 		kids = val;
+	}
+
+	public boolean isReg(){
+		return reg;
+	}
+
+	public void setReg(boolean val){
+		reg=val;
 	}
 }
