@@ -21,12 +21,12 @@ public class Customer {
 		return frequentRPoints;
 	}
 	
-	public void addFRP(Media m){
+	public void addFRP(int val){
 	/*	frequentRPoints++;
 		if (m.isNew() && m.getDays()>1)
 			frequentRPoints++;
 	*/
-		frequentRPoints+=FRPStrategy.addFRP(m);
+		frequentRPoints+=val;
 	}
     
     /*public String statement() {

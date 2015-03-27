@@ -1,13 +1,16 @@
 
-
+import java.util.ArrayList<E>;
 
 public class FRPStrategy {
 	
 	
-	public int addFRP(Media m){
-		int frp = 1;
-		if (m.isNew() && m.getDays()>1)
+	public int addFRP(ArrayList<Media> m){
+		int frp = 0;
+		for(int i=0; i<m.size();i++){
+			if (m.isNew() && m.getDays()>1)
+				frp++;
 			frp++;
+		}
 		return frp;
 	}
 
