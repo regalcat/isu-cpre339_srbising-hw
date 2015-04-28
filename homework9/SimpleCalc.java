@@ -46,7 +46,7 @@ public class SimpleCalc{
 
 	///The user calls this to begin the computations on the given equation
 	/// @return The Number representing the result of the equation
-	public Number parseEquation(String s){
+	public String parseEquation(String s){
 		equation = new ArrayList<String>(Arrays.asList(s.split("(?!^)"));
 		operands = new ArrayList<Number>();
 		operators = new ArrayList<String>();
@@ -149,14 +149,14 @@ public class SimpleCalc{
 				}
 			}
 		}
-		equation.add(i, operands.get(0));
+		equation.add(i, operands.get(0).toString());
 		operands.removeAll();
 		operators.removeAll();
 		state = "oparen";
 	}
 	
 	private boolean isDigit(String str){
-		if(str.matches("?\\d^") || str.matches("?\\.^"))
+		if(str.matches("-?\\d+(\\.\\d+)?") || str.matches("?\\.^"))
 			return true;
 		return false;
 	}
